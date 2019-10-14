@@ -1,0 +1,61 @@
+firebase deploy:    
+                Deploy to Firebase Hosting
+                You can deploy now or later. To deploy now, open a terminal window, then navigate to or create a root directory for your web app.
+
+                Sign in to Google
+
+                firebase login
+                Initiate your project
+                Run this command from your app’s root directory:
+
+
+                firebase init
+                Specify your site in firebase.json
+                Add your site name to the firebase.json configuration file. After you get set up, see the best practices for multi-site deployment.
+
+
+                {
+                "hosting": {
+                    "site": "chat-for-money",
+                    "public": "public",
+                    ...
+                }
+                }
+                When you’re ready, deploy your web app
+                Put your static files (e.g., HTML, CSS, JS) in your app’s deploy directory (the default is “public”). Then, run this command from your app’s root directory:
+
+
+                firebase deploy --only hosting:chat-for-money
+                After deploying, view your app at chat-for-money.web.app
+
+                Need help? Check out the Hosting docs
+
+
+- In this project use simantic ui for styleing
+
+-to make css in js matrial ui 
+
+        import { makeStyles } from "@material-ui/core/styles";
+
+        const useStyles = makeStyles({
+        title:{
+            color: 'red'
+        }
+        })
+        function Register() {
+            const classes = useStyles()
+            return (
+                <div>
+                    <h1 className={classes.title}>text</h1>
+                </div>
+            );
+
+            }
+        export default Register
+
+- after having new user if you want to add name another than his name and image of his profile use md5 
+- save new created user into database: 
+            in firebase site go to database -> realtime database start in test mood and add the data 
+            for new user save id and name and image 
+            add them by code in program. 
+            
